@@ -1,0 +1,148 @@
+:root {
+
+  --blur-amount: 8px;
+
+  /* Colors */
+  --primary-red: #c62828;
+  --light-gray: #f5f5f5;
+  --medium-gray: #a9a9a9;
+  --border-gray: #ccc;
+  --line-red: #A7040442;
+  --white: #ffffff;
+
+  /* Fonts & Sizes */
+  --font-family: 'Roboto', sans-serif;
+  --font-small: 14px;
+  --font-medium: 15px;
+
+  /* Dimensions */
+  --radius-large: 50px;
+  --radius-medium: 10px;
+  --input-height: 45px;
+  --card-width: 550px;
+  --card-height: 450px;
+
+  /* Shadows & Effects */
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --blur-amount: 11px;
+
+  /* Gradient */
+  --btn-gradient: linear-gradient(228.29deg, #F15001 13.05%, #A31610 98.91%);
+  --btn-hover-gradient: linear-gradient(to right, #F15001 13.05%, #A31610 98.91%);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+.background {
+  background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(var(--blur-amount));
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Light black overlay */
+  z-index: 1;
+}
+
+.login-card {
+  position: fixed;
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: var(--card-width);
+  height: var(--card-height);
+  margin: auto;
+  margin-top: 1px;
+  box-shadow: var(--box-shadow);
+  z-index: 2;
+}
+
+
+.logo {
+  height: 90px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.company-name {
+  color: var(--primary-red);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: var(--font-small);
+}
+
+.red-line {
+  border-bottom: 2px solid var(--line-red);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.custom-input {
+  border-radius: var(--radius-medium);
+  color: var(--medium-gray);
+  background-color: var(--light-gray);
+  height: var(--input-height);
+  font-size: var(--font-small);
+  border: 1px solid var(--border-gray);
+}
+
+.eye-icon {
+
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+}
+
+.eye-icon:hover {
+  color: #000;
+}
+
+
+.sign-in-btn {
+  background: var(--btn-gradient);
+  color: var(--white);
+  font-weight: 500;
+  border-radius: var(--radius-medium);
+  height: var(--input-height);
+  font-size: var(--font-medium);
+  border: none;
+}
+
+.sign-in-btn:hover {
+  background: var(--btn-hover-gradient);
+}
+
+.footer-text {
+  position: absolute;
+  font-size: 17px;
+  font-family: Roboto;
+  bottom: 70px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.font-black {
+  color: black;
+}
