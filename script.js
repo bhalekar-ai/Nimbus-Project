@@ -1,7 +1,15 @@
-// script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const uploadInput = document.getElementById("resumeUpload");
+  const fileNameDisplay = document.getElementById("fileNameDisplay");
 
-function togglePassword() {
-    const pass = document.getElementById("password");
-    pass.type = pass.type === "password" ? "text" : "password";
+  if (uploadInput && fileNameDisplay) {
+    uploadInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        fileNameDisplay.textContent = file.name;
+      } else {
+        fileNameDisplay.textContent = "";
+      }
+    });
   }
-  
+});
