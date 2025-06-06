@@ -135,7 +135,8 @@ html {
 }
 
 .footer-text {
-  position: absolute;
+  position: relative;
+  padding-top: 10px;
   font-size: 17px;
   font-family: Roboto;
   bottom: 70px;
@@ -271,7 +272,7 @@ html {
 /*job selection*/
 
 .job-step-section {
-  padding: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem; 
 }
 
 /* Step Progress Indicator */
@@ -335,6 +336,7 @@ html {
   font-size: 1rem;
   border: none;
   transition: 0.3s ease;
+  margin-top: 10px;
 }
 
 .job-step-section .submit-btn:hover {
@@ -356,6 +358,8 @@ html {
   background-color: #fce1db;
   color: #A31610;
 }
+
+
 
 
 
