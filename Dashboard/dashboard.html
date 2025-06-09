@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../Dashboard/Navbar/navbar.css" />
+  <link rel="stylesheet" href="../Dashboard/Footer/footer.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../Dashboard/dashboard.css"/>
+  
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+ <main class="container-fluid p-0">
+  
+  <!-- All images combo Image -->
+ <section class="container-fluid p-0 my-1 position-relative hero-section">
+  <!-- Background Windmill Image -->
+  <img src="../images/dashboard-background.webp" 
+       alt="Windmill Background" 
+       class="img-fluid w-100 hero-bg">
+
+  <!-- Left Globe Dots Overlay -->
+  <img src="../images/left-banner.webp" 
+       alt="" 
+       class="hero-dot hero-dot-left d-none d-md-block">
+
+  <!-- Right Globe Dots Overlay -->
+  <img src="../images/right-banner.webp" 
+       alt="" 
+       class="hero-dot hero-dot-right d-none d-md-block">
+
+  <!-- Centered Content Image Overlay -->
+  <div class="hero-center-content position-absolute top-50 start-50 translate-middle w-100 d-flex justify-content-center">
+    <img src="../images/service-2.webp" 
+         alt="Center Content" 
+         class="img-fluid" 
+         style="max-width: 700px; width: 90%;">
+  </div>
+</section>
+
+
+    <section class="container-fluid p-0 hero-section position-relative">
+  <!-- ... HERO CONTENT ... -->
+
+  <!-- Overlapping Search Bar -->
+  <div class="hero-searchbar-wrapper position-absolute start-50 translate-middle-x bg-white shadow rounded" style=" z-index: 10; max-width: 1200px; width: 90vw;">
+    <form class="row justify-content-center align-items-center g-0 mx-0">
+      <div class="col p-0">
+        <div class="input-group">
+          <span class="input-group-text bg-white border-0">
+            <i class="bi bi-pencil"></i>
+          </span>
+          <input type="text" class="form-control border-0" placeholder="Job title or keyword" />
+
+          <!-- Dotted Divider -->
+          <span class="hero-searchbar-divider"></span>
+
+          <span class="input-group-text bg-white border-0">
+            <i class="bi bi-geo-alt"></i>
+          </span>
+          <input type="text" class="form-control border-0" placeholder="Enter country..." />
+
+          <button type="submit" class="btn" style="background:#E94F1D; color: #fff; border: none;">Search Jobs</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+  <!-- CARDS SECTION -->
+  <section class="bg-white pt-4 pb-5 my-3 mt-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-8" style="color:#A31610;">
+        Discover Our <span class="bg-danger text-white px-2 rounded">Recruitment And HR Services</span>
+      </h2>
+      
+      <div class="row g-4 justify-content-center my-4">
+  <!-- Card 1 -->
+  <div class="col-md-4">
+    <div class="outer-card d-flex align-items-center justify-content-center" style="min-height:370px;">
+      <img src="../images/temporary.webp"
+           alt="Temporary Workforce Solutions"
+           class="img-fluid"
+           style="max-height:340px; border-radius:18px;">
+    </div>
+  </div>
+  <!-- Card 2 -->
+  <div class="col-md-4">
+    <div class="outer-card d-flex align-items-center justify-content-center" style="min-height:370px;">
+      <img src="../images/outsourcing.webp"
+           alt="Outsourcing and Project Staffing"
+           class="img-fluid"
+           style="max-height:340px; border-radius:18px;">
+    </div>
+  </div>
+  <!-- Card 3 -->
+  <div class="col-md-4">
+    <div class="outer-card d-flex align-items-center justify-content-center" style="min-height:370px;">
+      <img src="../images/permanent.webp"
+           alt="Permanent Hire and Executive Search"
+           class="img-fluid"
+           style="max-height:340px; border-radius:18px;">
+    </div>
+  </div>
+</div>
+</div>
+  </section>
+
+  <!-- our services section -->
+
+  <section class="container-fluid py-5 industries-section" style="background: #fafbfc;">
+  <div class="container">
+
+    <!-- Heading -->
+    <h2 class="text-center mb-5 fw-bold" style="font-size:2.5rem; color:#A31610;">
+      We Have Jobs For <span class="industries-highlight">The Industries</span> Below
+    </h2>
+
+    <!-- Image Grid -->
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Survey.webp" alt="Survey" class="img-fluid industry-img" />
+          <div class="industry-label">Survey</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Seismic.webp" alt="Seismic" class="img-fluid industry-img" />
+          <div class="industry-label">Seismic</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/ROV.webp" alt="ROV, Diving & Inspection" class="img-fluid industry-img" />
+          <div class="industry-label">ROV, Diving & Inspection</div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Renewables.webp" alt="Renewables" class="img-fluid industry-img" />
+          <div class="industry-label">Renewables</div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/QHSE.webp" alt="QHSE" class="img-fluid industry-img" />
+          <div class="industry-label">QHSE</div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Offshore.webp" alt="Offshore Marine" class="img-fluid industry-img" />
+          <div class="industry-label">Offshore Marine</div>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Marine.webp" alt="Marine Environmental" class="img-fluid industry-img" />
+          <div class="industry-label">Marine Environmental</div>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Management.webp" alt="Management & Quality Control" class="img-fluid industry-img" />
+          <div class="industry-label">Management & Quality Control</div>
+        </div>
+      </div>
+      <!-- Card 9 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Energy.webp" alt="Energy" class="img-fluid industry-img" />
+          <div class="industry-label">Energy</div>
+        </div>
+      </div>
+      <!-- Card 10 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Drilling.webp" alt="Drilling & Well Services" class="img-fluid industry-img" />
+          <div class="industry-label">Drilling & Well Services</div>
+        </div>
+      </div>
+      <!-- Card 11 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/Dredging.webp" alt="Dredging" class="img-fluid industry-img" />
+          <div class="industry-label">Dredging</div>
+        </div>
+      </div>
+      <!-- Card 12 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <img src="../images/catering.webp" alt="Catering" class="img-fluid industry-img" />
+          <div class="industry-label">Catering</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- altas section -->
+  <section class="container-fluid p-0 my-4">
+  <div class="d-flex justify-content-center">
+    <img 
+      src="../images/atlas.webp" 
+      alt="Atlas Professionals In Numbers"
+      class="numbers-banner-img img-fluid"
+      style="max-width: 100vw;">
+  </div>
+</section>
+
+<!-- latest news section -->
+
+  <section class="my-2">
+  <img 
+    src="../images/Latest-News.webp" 
+    alt="Read The Latest News Below" 
+    class="news-banner-img shadow-sm"
+  />
+</section>
+
+<!-- latest Updates section -->
+ 
+<section class="container-fluid p-0 my-4"></section>
+  <div class="d-flex justify-content-center">
+    <div class="newsletter-img-banner position-relative w-100" style="max-width: 1700px; min-height: 320px;">
+      <!-- Background image always fills the card -->
+      <img src="../images/background-latest-updates.webp"
+           alt="Newsletter Background"
+           class="newsletter-bg-img position-absolute top-0 start-0 w-100 h-100"
+           style="object-fit: cover; z-index:1;">
+
+      <!-- Flex row for content+helmet -->
+      <div class="d-flex align-items-center justify-content-between position-relative h-100 px-5" style="z-index:2; min-height: 280px;">
+        <!-- LEFT: Newsletter content image, moved in from left -->
+        <div class="newsletter-content-img-wrapper d-flex align-items-center" style="flex-basis:60%; justify-content:flex-start;">
+          <img src="../images/latest-updates.webp"
+               alt="Newsletter Content"
+               class="img-fluid"
+               style="max-width:600px; width:100%;">
+        </div>
+        <!-- RIGHT: Helmet image, never disappears -->
+        <div class="newsletter-helmet-img-wrapper d-flex align-items-center" style="flex-basis:40%; justify-content:flex-end;">
+          <img src="../images/helmet.webp"
+               alt="Newsletter Helmet"
+               class="img-fluid"
+               style="max-width:320px; width:90%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- our values SECTION -->
+<section class="my-4">
+  <img 
+    src="../images/our-values.webp" 
+    alt="Our Values Are Our Common Thread" 
+    class="our-values-img shadow-sm"
+  />
+</section>
+
+<!-- one atlas SECTION -->
+<section class="my-4 mt-59">
+  <div class="one-atlas-container">
+    <img src="../images/one-atlas.webp" alt="One Atlas Is Where It Starts" class="one-atlas-img rounded-4 shadow-sm" />
+  </div>
+</section>
+
+<!-- OUR PROFESSIONALS SAY THE NICEST THINGS -->
+  <section class="container-fluid p-0 my-4">
+  <div class="d-flex justify-content-center">
+  <img 
+    src="../images/professionals.png" 
+    alt="Our Professionals Say The Nicest Things" 
+    class="professionals-img img-fluid"
+    style="max-width: 100vw;"
+  />
+</section>
+
+<!-- CERTIFIED AND QUALIFIED -->
+
+<section class="container-fluid bg-white py-4">
+  <div class="container text-center">
+
+    <!-- Headline -->
+    <h2 class="mb-4 fw-bold" style="font-size:2.2rem; color:#A31610;">
+      We Are <span class="cert-highlight">Certified And Qualified</span>
+    </h2>
+
+    <!-- Logos row -->
+    <div class="cert-logos-row d-flex justify-content-center align-items-center flex-wrap">
+      <img src="../images/logo1.webp" alt="Certification 1" class="cert-logo" />
+      <img src="../images/logo2.webp" alt="Certification 2" class="cert-logo" />
+  
+      <img src="../images/logo4.webp" alt="Certification 4" class="cert-logo" />
+      <img src="../images/logo5.webp" alt="Certification 5" class="cert-logo" />
+      <img src="../images/logo6.webp" alt="Certification 6" class="cert-logo" />
+      <img src="../images/logo7.webp" alt="Certification 7" class="cert-logo" />
+      <img src="../images/logo8.webp" alt="Certification 8" class="cert-logo" />
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <div id="footer-placeholder"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

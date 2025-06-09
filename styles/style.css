@@ -148,7 +148,7 @@ html {
   color: black;
 }
 
-/* --- Upload Page Specific Styles ---(verification page) */
+/* --- Upload Page */
 :root {
   --font-type: 'Roboto', sans-serif;
 }
@@ -213,7 +213,7 @@ html {
   background: linear-gradient(to right, #f2891f, #f63a1f);
 }
 
-/* OTP SECTION – Scoped styles */
+/* OTP SECTION PAGE */
 .otp-section .otp-title {
   color: #A31610;
   font-size: 1.5rem;
@@ -269,7 +269,7 @@ html {
   background: linear-gradient(to right, #d63a2d, #e95c26);
 }
 
-/*job selection*/
+/*job selection page */
 
 .job-step-section {
   padding: 1rem 1rem 0.5rem 1rem; 

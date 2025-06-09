@@ -1,0 +1,460 @@
+/* =============== HERO SECTION =============== */
+
+/* Remove unwanted top spacing from hero section */
+.hero-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Wrapper for hero image with orange overlay, 4px top padding for visual separation */
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 220px;    /* Minimum height on desktop */
+  height: 250px;        /* Desktop height */
+  padding-top: 4px;     /* Extra space at top */
+  overflow: hidden;     /* Hide overflow for overlays */
+}
+
+/* Windmill background image: fills wrapper, darkens and tints for readability */
+.hero-bg {
+  width: 100%;
+  height: 100%;           /* Always fill parent height */
+  min-height: 220px;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.7) sepia(0.3);
+}
+
+/* Semi-transparent orange overlay for vibrancy */
+.hero-overlay {
+  background: rgba(255, 105, 0, 0.34);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* Let mouse events through */
+}
+
+/* Globe dot overlays: absolute, positioned left/right, always on top of background */
+.hero-dot {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-dot-left { left: 0; }
+.hero-dot-right { right: 0; }
+
+/* Center content (overlay image or text) appears above all hero content */
+.hero-center-content {
+  z-index: 3;
+}
+
+/* Responsive: hero image and wrapper shrink on mobile; overlays and center content also scale down */
+@media (max-width: 767px) {
+  .hero-img-wrapper,
+  .hero-bg {
+    min-height: 140px;
+    height: 160px;
+    
+  }
+  .hero-dot {
+    width: 120px;
+  }
+  .hero-center-content img {
+    max-width: 98vw;
+  }
+}
+/* =============== HERO search CONTENT IMAGE =============== */
+.hero-searchbar-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;              /* overlap as in screenshot */
+  z-index: 10;
+  max-width: 60%;           /* updated for your image width! */
+  width: 95vw;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  padding: 0;
+}
+
+.hero-searchbar-wrapper .input-group {
+  height: 76px;               /* taller, per screenshot */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: none;
+  background: #fff;
+  align-items: stretch;
+}
+
+.hero-searchbar-wrapper .form-control,
+.hero-searchbar-wrapper .input-group-text {
+  height: 76px;
+  font-size: 1.17rem;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+}
+
+.hero-searchbar-wrapper .form-control {
+  padding-left: 18px;
+  padding-right: 8px;
+  color: #A31610;
+}
+
+.hero-searchbar-wrapper .form-control::placeholder {
+  color: #B5B5B5;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.hero-searchbar-wrapper .form-control:focus {
+  box-shadow: none;
+}
+
+.hero-searchbar-wrapper .input-group-text {
+  color: #A31610;
+  background: #fff;
+  border: none;
+  font-size: 1.35rem;
+  padding-left: 22px;
+  padding-right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-searchbar-wrapper .input-group > .form-control:not(:last-child) {
+  border-right: 2px solid #E9E9E9; /* thicker divider, as seen */
+}
+
+.hero-searchbar-wrapper .btn {
+  background: linear-gradient(90deg, #A31610  40%, #A31610 100%);
+  color: #fff;
+  border: none;
+  padding: 0 38px;
+  border-radius: 10px !important;
+  font-weight: 500;
+  height: 56px;
+  margin: 10px 18px 10px 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  font-size: 1.11rem;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-searchbar-wrapper .btn:hover {
+  background: linear-gradient(90deg, #A31610 60%, #A31610 100%);
+}
+.hero-searchbar-divider {
+  border: none;
+  border-left: 2.5px dotted #E9E9E9;
+  height: 40px;
+  align-self: center;
+  margin: 0 8px 0 0;
+  background: none;
+  width: 0;
+  display: inline-block;
+}
+
+
+@media (max-width: 850px) {
+  .hero-searchbar-wrapper {
+    max-width: 99vw;
+    border-radius: 12px;
+    bottom: -45px;
+  }
+  .hero-searchbar-wrapper .input-group,
+  .hero-searchbar-wrapper .form-control,
+  .hero-searchbar-wrapper .input-group-text {
+    height: 56px;
+    font-size: 1rem;
+  }
+  .hero-searchbar-wrapper .btn {
+    height: 42px;
+    padding: 0 14px;
+    margin: 7px 4px 7px 4px;
+    font-size: 1rem;
+  }
+}
+/* =============== temporary outsourcing permanent IMAGE =============== */
+.card-img-only {
+  background: #fff;
+  border: 2px dashed #A31610;    /* or #A31610 to match your theme */
+  border-radius: 18px;
+  transition: box-shadow 0.2s;
+}
+
+.card-img-only img {
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* =============== services IMAGE =============== */
+
+.industries-section {
+  background: #fafbfc;
+}
+
+/* Highlighted heading style */
+.industries-highlight {
+  background: #A31610;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0 12px;
+  display: inline-block;
+}
+
+/* Card with image only */
+.industry-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.industry-card-custom {
+  width: 318px !important;
+  height: 383px !important;
+  position: absolute;           /* Or relative, depending on context */
+  top: 2230px;
+  left: 1206px;
+  border-top-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  /* Maintain other corners as per default or your need */
+  overflow: hidden;
+}
+
+.industry-card:hover {
+  box-shadow: 0 6px 24px rgba(163,22,16,0.12);
+}
+
+/* Responsive, square-like images */
+.industry-img {
+  width: 100%;
+  aspect-ratio: 1.1/1.25; /* Square-like; change if needed */
+  object-fit: cover;
+  display: block;
+  
+}
+
+@media (max-width: 991px) {
+  .industry-card {
+    border-radius: 12px;
+  }
+  .industry-img {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (max-width: 767px) {
+  .industry-card {
+    border-radius: 8px;
+  }
+}
+
+
+/* =============== atlas IMAGE =============== */
+
+.numbers-banner-img {
+  width: 1700px;
+  max-width: calc(100vw - 10px);         /* Adjust to your preferred desktop max */
+  height: auto;
+  display: block;
+  border-radius: 0;          /* Straight corners */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10); /* Optional: subtle shadow */
+  margin: 0 auto;
+}
+
+
+
+/* =============== LATEST NEWS IMAGE =============== */
+
+/* News banner: centered, large but responsive, no border, soft shadow */
+.news-banner-img {
+  width: 1680px;
+  max-width: calc(100vw - 10px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border: none;
+}
+
+/* =============== LATEST UPDATE IMAGE =============== */
+.newsletter-img-banner {
+  min-height: 320px;
+  height: min(38vw, 440px);
+  max-width: 1700px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+.newsletter-bg-img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  max-height: 440px;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.97;
+}
+@media (max-width: 991px) {
+  .newsletter-img-banner {
+    min-height: 190px;
+    height: auto;
+  }
+  .newsletter-img-banner > .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .newsletter-content-img-wrapper,
+  .newsletter-helmet-img-wrapper {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 1.2rem;
+  }
+  .newsletter-helmet-img-wrapper {
+    margin-bottom: 0;
+  }
+  .newsletter-content-img-wrapper img,
+  .newsletter-helmet-img-wrapper img {
+    max-width: 96vw !important;
+    width: 96vw !important;
+  }
+}
+
+
+/* =============== OUR VALUES IMAGE =============== */
+
+/* Our Values image: centered, responsive, 4px top margin, straight corners, shadow */
+.our-values-img {
+  width: 1380px;
+  max-width: calc(100vw - 10px);
+  height: auto;
+  margin: 4px auto 0 auto;
+  border-radius: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* =============== ONE ATLAS IMAGE =============== */
+
+/* Container for One Atlas image: adds 5px left/right margin, centers image */
+.one-atlas-container {
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+}
+
+/* One Atlas image: full width, max size, rounded corners, shadow */
+.one-atlas-img {
+  width: 100%;
+  max-width: 1450px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* =============== PROFESSIONALS IMAGE =============== */
+
+/* Professionals image: full width, 4px top margin, straight edges, shadow */
+.professionals-img {
+  width: 100%;
+  height: auto;
+  margin-top: 4px;
+  border-radius: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* =============== CERTIFIED IMAGE =============== */
+.cert-highlight {
+  background: #A31610;
+  color: #fff;
+  border-radius: 14px;
+  padding: 0 18px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.cert-logos-row {
+  gap: 2.5rem;
+  margin: 0 auto;
+  padding-bottom: 8px;
+  /* Ensures scroll on mobile */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #eee;
+}
+
+.cert-logo {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.7);
+  transition: filter 0.2s;
+  flex-shrink: 0;
+  margin: 0 0.5rem;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.cert-logo:hover {
+  filter: grayscale(0) brightness(1.03);
+}
+
+/* Responsive: allow horizontal scroll on mobile, don't wrap */
+@media (max-width: 991px) {
+  .cert-logos-row {
+    gap: 1.4rem;
+  }
+  .cert-logo {
+    max-height: 36px;
+    margin: 0 0.3rem;
+  }
+  h2 {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .cert-logos-row {
+    gap: 1rem;
+  }
+  .cert-logo {
+    max-height: 28px;
+  }
+}
+
+/* Optional: style scrollbar for horizontal row */
+.cert-logos-row::-webkit-scrollbar {
+  height: 6px;
+}
+.cert-logos-row::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 4px;
+}
+

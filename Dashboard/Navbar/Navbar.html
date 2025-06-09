@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nimbus Navbar</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+<body>
+  
+ <nav class="navbar navbar-expand-lg shadow-sm py-2 bg-white">
+  <div class="container-fluid px-2 px-md-4 align-items-center position-relative">
+    <!-- Logo -->
+    <a class="navbar-brand nav-logo me-1" href="#">
+      <img src="../images/nimbus-logo.png" alt="Nimbus Logo" class="nav-logo-img" />
+    </a>
+    <!-- MOBILE ONLY: Search bar, search icon, hamburger -->
+    <div class="d-lg-none d-flex align-items-center flex-grow-1">
+      <form class="mobile-search flex-grow-1 me-1" role="search" style="max-width: 220px;">
+  <div class="input-group">
+    <span class="input-group-text" id="search-icon"
+      style="background:#f5f5f5; border:1.5px solid #A31610; border-right:0; border-radius:999px 0 0 999px;">
+      <i class="bi bi-search" style="color:#A31610;"></i>
+    </span>
+    <input 
+      type="search" 
+      class="form-control mobile-search-input" 
+      placeholder="Search" 
+      aria-label="Search" 
+      aria-describedby="search-icon"
+      style="background:#f5f5f5; border:1.5px solid #A31610; border-radius:0 999px 999px 0;"
+    />
+  </div>
+</form>
+
+
+
+
+      <button class="navbar-toggler ms-1 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- Menu: collapse on mobile -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Jobs</a>
+        </li>
+        <!-- MEGA DROPDOWN (example for Professionals) -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">For Professionals</a>
+          <div class="dropdown-menu mega-dropdown py-3 px-4" style="width: 500px;">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="dropdown-header">Find Opportunities</h6>
+                <a class="dropdown-item" href="#">All Jobs</a>
+                <a class="dropdown-item" href="#">Contract Work</a>
+                <a class="dropdown-item" href="#">Permanent Roles</a>
+              </div>
+              <div class="col-6">
+                <h6 class="dropdown-header">Career Resources</h6>
+                <a class="dropdown-item" href="#">CV Help</a>
+                <a class="dropdown-item" href="#">Interview Tips</a>
+                <a class="dropdown-item" href="#">Industry News</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- MEGA DROPDOWN (example for Clients) -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">For Clients</a>
+          <div class="dropdown-menu mega-dropdown py-3 px-4" style="width: 500px;">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="dropdown-header">Hire Talent</h6>
+                <a class="dropdown-item" href="#">Temporary Staffing</a>
+                <a class="dropdown-item" href="#">Permanent Recruitment</a>
+              </div>
+              <div class="col-6">
+                <h6 class="dropdown-header">Client Resources</h6>
+                <a class="dropdown-item" href="#">Our Process</a>
+                <a class="dropdown-item" href="#">Compliance</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- MEGA DROPDOWN (example for About) -->
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+          <div class="dropdown-menu mega-dropdown py-3 px-4" style="width: 400px;">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="dropdown-header">Company</h6>
+                <a class="dropdown-item" href="#">Our Story</a>
+                <a class="dropdown-item" href="#">Leadership</a>
+              </div>
+              <div class="col-6">
+                <h6 class="dropdown-header">Get in Touch</h6>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="#">Careers</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+      </ul>
+      <!-- Right icons (desktop only) -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <a href="#" class="nav-icon"><i class="bi bi-search"></i></a>
+        <a href="#" class="nav-icon"><i class="bi bi-person"></i></a>
+        <a href="#" class="nav-icon"><i class="bi bi-heart"></i></a>
+        <a href="#" class="nav-icon"><i class="bi bi-bell"></i></a>
+      </div>
+    </div>
+    <!-- MOBILE: vertical icon stack, hidden by default -->
+    <div class="mobile-icons-vertical d-lg-none position-absolute end-0" style="top:60px; right:8px;">
+      <a href="#" class="nav-icon d-block mb-2"><i class="bi bi-person"></i></a>
+      <a href="#" class="nav-icon d-block mb-2"><i class="bi bi-heart"></i></a>
+      <a href="#" class="nav-icon d-block"><i class="bi bi-bell"></i></a>
+    </div>
+  </div>
+</nav>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
