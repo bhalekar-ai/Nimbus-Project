@@ -21,55 +21,55 @@
   <div id="navbar-placeholder"></div>
  <main class="container-fluid p-0">
   
+  
   <!-- All images combo Image -->
- <section class="container-fluid p-0 my-1 position-relative hero-section">
-  <!-- Background Windmill Image -->
+
+  <section class="container-fluid p-0 my-1 position-relative min-vh-25 overflow-hidden">
   <img src="../images/dashboard-background.webp" 
        alt="Windmill Background" 
-       class="img-fluid w-100 hero-bg">
+       class="img-fluid w-100 h-100 hero-bg position-relative">
 
-  <!-- Left Globe Dots Overlay -->
+  <div class="hero-overlay"></div>
+
   <img src="../images/left-banner.webp" 
        alt="" 
-       class="hero-dot hero-dot-left d-none d-md-block">
+       class="position-absolute top-0 start-0 d-none d-md-block hero-dot">
 
-  <!-- Right Globe Dots Overlay -->
   <img src="../images/right-banner.webp" 
        alt="" 
-       class="hero-dot hero-dot-right d-none d-md-block">
+       class="position-absolute top-0 end-0 d-none d-md-block hero-dot">
 
-  <!-- Centered Content Image Overlay -->
-  <div class="hero-center-content position-absolute top-50 start-50 translate-middle w-100 d-flex justify-content-center">
+  <div class="position-absolute top-50 start-50 translate-middle w-100 d-flex justify-content-center z-3 hero-center-content">
     <img src="../images/service-2.webp" 
          alt="Center Content" 
-         class="img-fluid" 
-         style="max-width: 700px; width: 90%;">
+         class="img-fluid hero-center-img">
   </div>
 </section>
 
 
-    <section class="container-fluid p-0 hero-section position-relative">
   <!-- ... HERO CONTENT ... -->
 
-  <!-- Overlapping Search Bar -->
-  <div class="hero-searchbar-wrapper position-absolute start-50 translate-middle-x bg-white shadow rounded" style=" z-index: 10; max-width: 1200px; width: 90vw;">
+   <section class="container-fluid p-0 position-relative">
+  <div class="hero-searchbar-wrapper position-absolute start-50 translate-middle-x shadow bg-white rounded-4">
     <form class="row justify-content-center align-items-center g-0 mx-0">
       <div class="col p-0">
-        <div class="input-group">
-          <span class="input-group-text bg-white border-0">
+        <div class="input-group flex-nowrap h-searchbar">
+          <span class="input-group-text bg-white border-0 text-danger fs-5 px-4">
             <i class="bi bi-pencil"></i>
           </span>
-          <input type="text" class="form-control border-0" placeholder="Job title or keyword" />
+          <input type="text" class="form-control border-0 px-3 py-0 text-danger search-input" placeholder="Job title or keyword" />
 
           <!-- Dotted Divider -->
           <span class="hero-searchbar-divider"></span>
 
-          <span class="input-group-text bg-white border-0">
+          <span class="input-group-text bg-white border-0 text-danger fs-5 px-4">
             <i class="bi bi-geo-alt"></i>
           </span>
-          <input type="text" class="form-control border-0" placeholder="Enter country..." />
+          <input type="text" class="form-control border-0 px-3 py-0 text-danger search-input" placeholder="Enter country..." />
 
-          <button type="submit" class="btn" style="background:#E94F1D; color: #fff; border: none;">Search Jobs</button>
+          <button type="submit" class="btn btn-danger btn-lg px-5 fw-medium ms-0">
+            Search Jobs
+          </button>
         </div>
       </div>
     </form>
@@ -77,166 +77,209 @@
 </section>
 
 
+
   <!-- CARDS SECTION -->
   <section class="bg-white pt-4 pb-5 my-3 mt-5">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-8" style="color:#A31610;">
-        Discover Our <span class="bg-danger text-white px-2 rounded">Recruitment And HR Services</span>
-      </h2>
-      
-      <div class="row g-4 justify-content-center my-4">
-  <!-- Card 1 -->
-  <div class="col-md-4">
-    <div class="outer-card d-flex align-items-center justify-content-center" style="min-height:370px;">
-      <img src="../images/temporary.webp"
-           alt="Temporary Workforce Solutions"
-           class="img-fluid"
-           style="max-height:340px; border-radius:18px;">
-    </div>
-  </div>
-  <!-- Card 2 -->
-  <div class="col-md-4">
-    <div class="outer-card d-flex align-items-center justify-content-center" style="min-height:370px;">
-      <img src="../images/outsourcing.webp"
-           alt="Outsourcing and Project Staffing"
-           class="img-fluid"
-           style="max-height:340px; border-radius:18px;">
-    </div>
-  </div>
-  <!-- Card 3 -->
-  <div class="col-md-4">
-    <div class="outer-card d-flex align-items-center justify-content-center" style="min-height:370px;">
-      <img src="../images/permanent.webp"
-           alt="Permanent Hire and Executive Search"
-           class="img-fluid"
-           style="max-height:340px; border-radius:18px;">
-    </div>
-  </div>
-</div>
-</div>
-  </section>
-
-  <!-- our services section -->
-
-  <section class="container-fluid py-5 industries-section" style="background: #fafbfc;">
   <div class="container">
+    <h2 class="text-center fw-bold mb-8 text-danger">
+      Discover Our <span class="bg-danger text-white px-2 rounded">Recruitment And HR Services</span>
+    </h2>
+    <div class="row g-4 justify-content-center my-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="custom-card d-flex align-items-center justify-content-center bg-white">
+          <img src="../images/temporary.webp"
+               alt="Temporary Workforce Solutions"
+               class="img-fluid custom-card-img">
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="custom-card d-flex align-items-center justify-content-center bg-white">
+          <img src="../images/outsourcing.webp"
+               alt="Outsourcing and Project Staffing"
+               class="img-fluid custom-card-img">
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="custom-card d-flex align-items-center justify-content-center bg-white">
+          <img src="../images/permanent.webp"
+               alt="Permanent Hire and Executive Search"
+               class="img-fluid custom-card-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+  <!-- SERVICES SECTION -->
+
+  <section class="container-fluid py-5 bg-light">
+  <div class="container">
     <!-- Heading -->
     <h2 class="text-center mb-5 fw-bold" style="font-size:2.5rem; color:#A31610;">
       We Have Jobs For <span class="industries-highlight">The Industries</span> Below
     </h2>
-
     <!-- Image Grid -->
     <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Survey.webp" alt="Survey" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Seismic.webp" alt="Seismic" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/ROV.webp" alt="ROV, Diving & Inspection" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Renewables.webp" alt="Renewables" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/QHSE.webp" alt="QHSE" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Offshore.webp" alt="Offshore Marine" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Marine.webp" alt="Marine Environmental" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Management.webp" alt="Management & Quality Control" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Energy.webp" alt="Energy" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Drilling.webp" alt="Drilling & Well Services" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/Dredging.webp" alt="Dredging" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 text-center">
+        <img src="../images/catering.webp" alt="Catering" class="img-fluid industry-img mb-2" />
+        <div class="industry-label"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATLAS SECTION -->
+  <section class="container-fluid numbers-section d-flex align-items-center">
+  <div class="container text-center py-4">
+    <h2 class="fw-semibold mb-4">
+      Atlas Professionals <span class="numbers-pill">In Numbers</span>
+    </h2>
+    <div class="row justify-content-center">
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <span class="numbers-value">
+          <span class="count-up" data-count="299">0</span>
+          <span class="numbers-plus flicker">+</span>
+        </span>
+        <div>Jobs Offered<br>Worldwide</div>
+      </div>
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <span class="numbers-value">
+          <span class="count-up" data-count="2000">0</span>
+          <span class="numbers-plus flicker">+</span>
+        </span>
+        <div>Professionals Working<br>For Us Everyday</div>
+      </div>
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <span class="numbers-value">
+          <span class="count-up" data-count="40">0</span>
+          <span class="numbers-plus flicker">+</span>
+        </span>
+        <div>Years Of<br>Experience</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <span class="numbers-value">
+          <span class="count-up" data-count="94">0</span>
+          <span class="numbers-percent flicker">%</span>
+        </span>
+        <div>Company<br>Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST NEWS SECTION-->
+
+ <section class="container-fluid bg-light py-5">
+  <div class="container">
+    <!-- Heading -->
+    <h2 class="text-center mb-5 fw-bold" style="color:#A31610;">
+      Read The <span class="latest-news-pill">Latest News</span> Below
+    </h2>
+    <!-- Card Grid -->
+    <div class="row g-4">
       <!-- Card 1 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Survey.webp" alt="Survey" class="img-fluid industry-img" />
-          <div class="industry-label">Survey</div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card news-card h-100 border-0 shadow-sm">
+          <img src="../images/news1.png" class="card-img-top" alt="News 1">
+          <div class="card-body">
+            <small class="text-muted">Press Release</small>
+            <h6 class="card-title mt-1 fw-semibold">Atlas Professionals Secures Crew Management Contract For Noble Corporation’s Suriname Campaign</h6>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <small class="text-muted">17 April 2025</small>
+          </div>
         </div>
       </div>
       <!-- Card 2 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Seismic.webp" alt="Seismic" class="img-fluid industry-img" />
-          <div class="industry-label">Seismic</div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card news-card h-100 border-0 shadow-sm">
+          <img src="../images/news2.png" class="card-img-top" alt="News 2">
+          <div class="card-body">
+            <small class="text-muted">Company News</small>
+            <h6 class="card-title mt-1 fw-semibold">Atlas Professionals And Next Wave Partners Expand Global Footprint</h6>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <small class="text-muted">17 April 2025</small>
+          </div>
         </div>
       </div>
       <!-- Card 3 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/ROV.webp" alt="ROV, Diving & Inspection" class="img-fluid industry-img" />
-          <div class="industry-label">ROV, Diving & Inspection</div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card news-card h-100 border-0 shadow-sm">
+          <img src="../images/news3.png" class="card-img-top" alt="News 3">
+          <div class="card-body">
+            <small class="text-muted">Interview</small>
+            <h6 class="card-title mt-1 fw-semibold">The Importance Of Safety In Offshore Training: Insights From Mark McDonald</h6>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <small class="text-muted">13 March 2025</small>
+          </div>
         </div>
       </div>
       <!-- Card 4 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Renewables.webp" alt="Renewables" class="img-fluid industry-img" />
-          <div class="industry-label">Renewables</div>
-        </div>
-      </div>
-      <!-- Card 5 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/QHSE.webp" alt="QHSE" class="img-fluid industry-img" />
-          <div class="industry-label">QHSE</div>
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Offshore.webp" alt="Offshore Marine" class="img-fluid industry-img" />
-          <div class="industry-label">Offshore Marine</div>
-        </div>
-      </div>
-      <!-- Card 7 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Marine.webp" alt="Marine Environmental" class="img-fluid industry-img" />
-          <div class="industry-label">Marine Environmental</div>
-        </div>
-      </div>
-      <!-- Card 8 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Management.webp" alt="Management & Quality Control" class="img-fluid industry-img" />
-          <div class="industry-label">Management & Quality Control</div>
-        </div>
-      </div>
-      <!-- Card 9 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Energy.webp" alt="Energy" class="img-fluid industry-img" />
-          <div class="industry-label">Energy</div>
-        </div>
-      </div>
-      <!-- Card 10 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Drilling.webp" alt="Drilling & Well Services" class="img-fluid industry-img" />
-          <div class="industry-label">Drilling & Well Services</div>
-        </div>
-      </div>
-      <!-- Card 11 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/Dredging.webp" alt="Dredging" class="img-fluid industry-img" />
-          <div class="industry-label">Dredging</div>
-        </div>
-      </div>
-      <!-- Card 12 -->
-      <div class="col-6 col-md-4 col-lg-2">
-        <div class="industry-card">
-          <img src="../images/catering.webp" alt="Catering" class="img-fluid industry-img" />
-          <div class="industry-label">Catering</div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card news-card h-100 border-0 shadow-sm">
+          <img src="../images/news4.png" class="card-img-top" alt="News 4">
+          <div class="card-body">
+            <small class="text-muted">Interview</small>
+            <h6 class="card-title mt-1 fw-semibold">Greenhands Offshore Spotlight: Insights From 3T’s Training Leaders</h6>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <small class="text-muted">12 March 2025</small>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- altas section -->
-  <section class="container-fluid p-0 my-4">
-  <div class="d-flex justify-content-center">
-    <img 
-      src="../images/atlas.webp" 
-      alt="Atlas Professionals In Numbers"
-      class="numbers-banner-img img-fluid"
-      style="max-width: 100vw;">
-  </div>
-</section>
-
-<!-- latest news section -->
-
-  <section class="my-2">
-  <img 
-    src="../images/Latest-News.webp" 
-    alt="Read The Latest News Below" 
-    class="news-banner-img shadow-sm"
-  />
-</section>
 
 <!-- latest Updates section -->
  
@@ -270,53 +313,122 @@
   </div>
 </section>
 
-<!-- our values SECTION -->
-<section class="my-4">
-  <img 
-    src="../images/our-values.webp" 
-    alt="Our Values Are Our Common Thread" 
-    class="our-values-img shadow-sm"
-  />
-</section>
+<!-- OUR values SECTION -->
 
-<!-- one atlas SECTION -->
-<section class="my-4 mt-59">
-  <div class="one-atlas-container">
-    <img src="../images/one-atlas.webp" alt="One Atlas Is Where It Starts" class="one-atlas-img rounded-4 shadow-sm" />
+<section class="container my-5">
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <h2 class="fw-medium fs-2" style="color: #911a1a;">
+        Our Values Are Our
+        <span class="common-thread-pill rounded-pill fw-bold ms-2">Common Thread</span>
+      </h2>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-end text-center gx-2" style="max-width: 1050px; margin: 0 auto;">
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value1.png" class="img-fluid value-icon" alt="">
+    </div>
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value2.png" class="img-fluid value-icon" alt="">
+    </div>
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value3.png" class="img-fluid value-icon" alt="">
+    </div>
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value4.png" class="img-fluid value-icon" alt="">
+    </div>
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value5.png" class="img-fluid value-icon" alt="">
+    </div>
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value6.png" class="img-fluid value-icon" alt="">
+    </div>
+    <div class="col-6 col-lg mb-4">
+      <img src="../images/value7.png" class="img-fluid value-icon" alt="">
+    </div>
   </div>
 </section>
 
+<!-- one atlas SECTION -->
+<section class="container-fluid my-5">
+  <div class="container">
+    <div class="one-atlas-bg rounded-4 d-flex flex-row align-items-center position-relative overflow-visible">
+      <!-- Left: Big Overlapping Image -->
+      <div class="atlas-img-col d-none d-md-flex align-items-end position-relative">
+        <img src="../images/atlas.png" alt="Atlas Group" class="atlas-people-img" />
+      </div>
+      <!-- Right: Text and Dots -->
+      <div class="one-atlas-content d-flex flex-column justify-content-center align-items-start position-relative flex-grow-1 text-white ps-4 pe-4 py-4">
+        <img src="../images/right-banner.webp" alt="Dots" class="atlas-dots-bg" />
+        <h2 class="fw-bold mb-3 one-atlas-title">One Atlas Is Where It Starts</h2>
+        <p class="mb-4 one-atlas-desc">
+          We Want To Become The Number 1 Choice For Our Clients By Being Committed To Providing A Safe, Reliable, Competent And Happy Workforce Within The Niches We Operate At The Frontier Of Energy, Marine &amp; Renewables.
+        </p>
+        <a href="#" class="btn one-atlas-btn fw-bold mt-2">Discover More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- OUR PROFESSIONALS SAY THE NICEST THINGS -->
-  <section class="container-fluid p-0 my-4">
-  <div class="d-flex justify-content-center">
-  <img 
-    src="../images/professionals.png" 
-    alt="Our Professionals Say The Nicest Things" 
-    class="professionals-img img-fluid"
-    style="max-width: 100vw;"
-  />
+ 
+<section class="testimonial-section position-relative d-flex align-items-center overflow-hidden py-5 bg-dark">
+  <!-- Background image -->
+  <img src="../images/background-dashboard.png" alt="" class="bg-img-cover">
+  <!-- Dots overlays -->
+  <img src="../images/left-banner.webp" alt="" class="dots-left-bg" />
+  <img src="../images/right-banner.webp" alt="" class="dots-right-bg" />
+  <div class="container position-relative">
+    <h2 class="text-center text-white mb-4 fw-bold fs-2">
+      Our Professionals Say The Nicest Things
+    </h2>
+    <div class="row align-items-center g-4">
+      <!-- Left column -->
+      <div class="col-md-4 d-flex flex-column align-items-center">
+        <div class="bg-white bg-opacity-10 shadow rounded-3 mb-3 d-flex align-items-center justify-content-center" style="width: 200px; height: 200px;">
+          <img src="../images/ship-dashboard.png" alt="Ship" class="img-fluid w-100 h-100 object-fit-cover">
+        </div>
+        <div class="text-white fw-bold">Mathilde Hollegien</div>
+        <div class="text-white-50">P&amp;C Manager</div>
+      </div>
+      <!-- Right column -->
+      <div class="col-md-8">
+        <div class="card testimonial-card rounded-3 position-relative p-4">
+          <div class="position-absolute top-0 start-0 translate-middle-y ms-4 mt-n4" style="width:60px; height:60px;">
+            <img src="../images/testimonial-dashboard.png" alt="Lady" class="rounded-circle border border-3 border-white w-100 h-100 object-fit-cover shadow-sm">
+          </div>
+          <div class="position-absolute top-0 end-0 mt-2 me-4" style="width:38px;">
+            <img src="../images/quote.png" alt="Quote" class="w-100">
+          </div>
+          <div class="ps-5 mt-2">
+            <p class="fs-5 fst-italic mb-4" style="color:#242424;">
+              The Hiring Process Was Smooth And Streamlined And After Several Rounds Of Tough Interviews With The Client, I Was On Board With Them.
+            </p>
+            <button class="arrow-btn">
+              <img src="../images/arrow-icon.png" alt="Next">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CERTIFIED AND QUALIFIED -->
-
-<section class="container-fluid bg-white py-4">
+<section class="container-fluid bg-white py-4 section-m5 mt-5">
   <div class="container text-center">
-
-    <!-- Headline -->
-    <h2 class="mb-4 fw-bold" style="font-size:2.2rem; color:#A31610;">
-      We Are <span class="cert-highlight">Certified And Qualified</span>
+    <h2 class="mb-4 fw-bold" style="color:#A31610;">
+      We Are <span class="cert-highlight rounded-pill px-3 fw-bold">Certified And Qualified</span>
     </h2>
-
-    <!-- Logos row -->
-    <div class="cert-logos-row d-flex justify-content-center align-items-center flex-wrap">
-      <img src="../images/logo1.webp" alt="Certification 1" class="cert-logo" />
-      <img src="../images/logo2.webp" alt="Certification 2" class="cert-logo" />
-  
-      <img src="../images/logo4.webp" alt="Certification 4" class="cert-logo" />
-      <img src="../images/logo5.webp" alt="Certification 5" class="cert-logo" />
-      <img src="../images/logo6.webp" alt="Certification 6" class="cert-logo" />
-      <img src="../images/logo7.webp" alt="Certification 7" class="cert-logo" />
-      <img src="../images/logo8.webp" alt="Certification 8" class="cert-logo" />
+    <div class="cert-logos-row d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center gap-4 gap-md-5 mb-1">
+      <img src="../images/logo1.webp" alt="Certification 1" class="img-fluid cert-logo" />
+      <img src="../images/logo2.webp" alt="Certification 2" class="img-fluid cert-logo" />
+      <img src="../images/logo4.webp" alt="Certification 4" class="img-fluid cert-logo" />
+      <img src="../images/logo5.webp" alt="Certification 5" class="img-fluid cert-logo" />
+      <img src="../images/logo6.webp" alt="Certification 6" class="img-fluid cert-logo" />
+      <img src="../images/logo7.webp" alt="Certification 7" class="img-fluid cert-logo" />
+      <img src="../images/logo8.webp" alt="Certification 8" class="img-fluid cert-logo" />
     </div>
   </div>
 </section>

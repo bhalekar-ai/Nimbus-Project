@@ -1,34 +1,52 @@
+/* ======================== */
+/*        ROOT VARIABLES    */
+/* ======================== */
 :root {
+  --blur-amount: 11px;
 
-  --blur-amount: 8px;
-
-  /* Colors */
-  --primary-red: #c62828;
+  /* Color palette */
+  --primary-red: #c62828;      /* Main red for branding, use everywhere for red */
+  --secondary-red: #A31610;    /* For stepper, dark accents */
+  --upload-btn-red: #b91c1c;   /* For upload button */
   --light-gray: #f5f5f5;
   --medium-gray: #a9a9a9;
   --border-gray: #ccc;
   --line-red: #A7040442;
   --white: #ffffff;
+  --file-note-gray: #6c757d;   /* For file note */
+  --step-line-bg: #fce1db;     /* For step line background */
+  --otp-border: #333;          /* For OTP box border */
+  --black: #000000;
+  --eye-icon-gray: #777;
 
-  /* Fonts & Sizes */
+  /* Typography */
   --font-family: 'Roboto', sans-serif;
   --font-small: 14px;
   --font-medium: 15px;
 
-  /* Dimensions */
+  /* Dimensions and Radius */
   --radius-large: 50px;
   --radius-medium: 10px;
+  --radius-upload: 30px;
+  --radius-upload-btn: 50px;
+  --radius-otp: 10px;
+  --radius-job-btn: 8px;
   --input-height: 45px;
   --card-width: 550px;
   --card-height: 450px;
+  --card-height-upload: 520px;
+  --card-width-upload: 500px;
+  --card-maxwidth-upload: 520px;
 
-  /* Shadows & Effects */
+  /* Shadows */
   --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  --blur-amount: 11px;
 
-  /* Gradient */
+  /* Gradients */
   --btn-gradient: linear-gradient(228.29deg, #F15001 13.05%, #A31610 98.91%);
   --btn-hover-gradient: linear-gradient(to right, #F15001 13.05%, #A31610 98.91%);
+  --register-btn-hover: linear-gradient(to right, #f2891f, #f63a1f);
+  --verify-btn-hover: linear-gradient(to right, #d63a2d, #e95c26);
+  --job-btn-hover: linear-gradient(228.29deg, #d14100 13.05%, #880f0a 98.91%);
 }
 
 body,
@@ -56,10 +74,13 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Light black overlay */
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
+/* ======================== */
+/*      LOGIN CARD          */
+/* ======================== */
 .login-card {
   position: fixed;
   background-color: var(--white);
@@ -73,7 +94,6 @@ html {
   box-shadow: var(--box-shadow);
   z-index: 2;
 }
-
 
 .logo {
   height: 90px;
@@ -104,21 +124,18 @@ html {
 }
 
 .eye-icon {
-
   font-size: 18px;
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #777;
-  font-size: 18px;
+  color: var(--eye-icon-gray);
 }
 
 .eye-icon:hover {
-  color: #000;
+  color: var(--black);
 }
-
 
 .sign-in-btn {
   background: var(--btn-gradient);
@@ -137,34 +154,34 @@ html {
 .footer-text {
   position: relative;
   padding-top: 10px;
-  font-size: 17px;
-  font-family: Roboto;
+  font-size: var(--font-medium); /* root variable used */
+  font-family: var(--font-family);
   bottom: 70px;
   width: 100%;
   padding: 0 10px;
 }
 
 .font-black {
-  color: black;
+  color: var(--black);
 }
 
-/* --- Upload Page */
-:root {
-  --font-type: 'Roboto', sans-serif;
-}
+/* ======================== */
+/* --- Upload Page -------- */
+/* ======================== */
 .upload-page .login-card {
-  border-radius: 30px;
+  border-radius: var(--radius-upload);
   padding: 2.5rem 2rem;
-  height: 520px;
-  width: 500px;
-  max-width: 520px;
-  background-color: white;
+  height: var(--card-height-upload);
+  width: var(--card-width-upload);
+  max-width: var(--card-maxwidth-upload);
+  background-color: var(--white);
 }
+
 .upload-page .upload-page-resume-box {
-  border: 1px solid #ccc;
-  border-radius: 50px;
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius-large);
   padding: 6px 12px;
-  background-color: #fff;
+  background-color: var(--white);
   width: 100%;
   justify-content: space-between;
   gap: 1rem;
@@ -178,19 +195,18 @@ html {
 }
 
 .upload-page .resume-btn {
-  background-color: #b91c1c;
-  color: white;
+  background-color: var(--upload-btn-red);
+  color: var(--white);
   font-weight: 600;
   border: none;
-  border-radius: 50px;
-  padding: 0.56rem 1.4rem; /* Increased vertical padding slightly */
+  border-radius: var(--radius-upload-btn);
+  padding: 0.56rem 1.4rem;
   cursor: pointer;
   white-space: nowrap;
 }
 
-
 .upload-page .file-note {
-  color: #6c757d;
+  color: var(--file-note-gray);
   font-size: 0.9rem;
   flex-grow: 1;
   white-space: nowrap;
@@ -198,7 +214,6 @@ html {
   text-overflow: ellipsis;
 }
 
-/* Register button inside the card */
 .upload-page .register-btn {
   background: var(--btn-gradient);
   color: var(--white);
@@ -210,19 +225,21 @@ html {
 }
 
 .upload-page .register-btn:hover {
-  background: linear-gradient(to right, #f2891f, #f63a1f);
+  background: var(--register-btn-hover);
 }
 
-/* OTP SECTION PAGE */
+/* ======================== */
+/* --- OTP SECTION PAGE --- */
+/* ======================== */
 .otp-section .otp-title {
-  color: #A31610;
+  color: var(--secondary-red);
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 2.0rem;
 }
 
 .otp-section .otp-instruction {
-  color:#A31610;
+  color: var(--secondary-red);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -231,13 +248,12 @@ html {
   width: 60px;
   height: 60px;
   font-size: 24px;
-  border: 2px solid #333;
-  border-radius: 10px;
+  border: 2px solid var(--otp-border);
+  border-radius: var(--radius-otp);
   text-align: center;
   outline: none;
 }
 
-/* Remove number arrows just in case */
 .otp-section .otp-box::-webkit-outer-spin-button,
 .otp-section .otp-box::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -249,33 +265,32 @@ html {
 
 .otp-section .otp-timer {
   font-size: 0.85rem;
-  color: black;
+  color: var(--black);
   margin-bottom: 3rem;
 }
 
 .otp-section .verify-btn {
-  background: linear-gradient(228.29deg, #F15001 13.05%, #A31610 98.91%);
-  color: white;
+  background: var(--btn-gradient);
+  color: var(--white);
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: var(--radius-otp);
   padding: 10px;
   font-size: 1rem;
   border: none;
   transition: 0.3s ease;
 }
 
-
 .otp-section .verify-btn:hover {
-  background: linear-gradient(to right, #d63a2d, #e95c26);
+  background: var(--verify-btn-hover);
 }
 
-/*job selection page */
-
+/* ======================== */
+/*  JOB SELECTION PAGE     */
+/* ======================== */
 .job-step-section {
-  padding: 1rem 1rem 0.5rem 1rem; 
+  padding: 1rem 1rem 0.5rem 1rem;
 }
 
-/* Step Progress Indicator */
 .job-step-section .step {
   display: flex;
   flex-direction: column;
@@ -288,50 +303,47 @@ html {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 2px solid #A31610;
-  background: white;
+  border: 2px solid var(--secondary-red);
+  background: var(--white);
 }
 
 .job-step-section .done .circle {
-  background: #A31610;
-  color: white;
+  background: var(--secondary-red);
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .job-step-section .active .circle {
-  border: 2px solid #A31610;
-  background: white;
+  border: 2px solid var(--secondary-red);
+  background: var(--white);
 }
 
 .job-step-section .gray {
-  background: #ccc;
+  background: var(--border-gray);
   border: none;
 }
 
-/* Dotted Line Between Steps */
 .job-step-section .step-line {
   flex: 0 0 40px;
   height: 2px;
-  border-top: 2px dotted #A31610;
-  margin-top: 0.4rem; /* aligns with circle vertically */
+  border-top: 2px dotted var(--secondary-red);
+  margin-top: 0.4rem;
 }
 
-/* Step Labels */
 .job-step-section .step-label {
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 4px;
-  color: #A31610;
+  color: var(--secondary-red);
 }
 
-/* Submit Button */
 .job-step-section .submit-btn {
-  background: linear-gradient(228.29deg, #F15001 13.05%, #A31610 98.91%);
-  color: white;
+  background: var(--btn-gradient);
+  color: var(--white);
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: var(--radius-job-btn);
   padding: 10px 40px;
   font-size: 1rem;
   border: none;
@@ -340,27 +352,28 @@ html {
 }
 
 .job-step-section .submit-btn:hover {
-  background: linear-gradient(228.29deg, #d14100 13.05%, #880f0a 98.91%);
+  background: var(--job-btn-hover);
 }
 
-/* Dropdown Styling */
 .job-step-section label.form-label {
-  color: #A31610;
+  color: var(--secondary-red);
   font-weight: 600;
 }
 
 .job-step-section select.form-select {
-  border: 1px solid #A31610;
-  color: #A31610;
+  border: 1px solid var(--secondary-red);
+  color: var(--secondary-red);
 }
 
 .job-step-section select.form-select option:checked {
-  background-color: #fce1db;
-  color: #A31610;
+  background-color: var(--step-line-bg);
+  color: var(--secondary-red);
 }
 
-
-
-
-
-
+/* ======================== */
+/*      ADDITIONAL ROOT     */
+/* ======================== */
+:root {
+  --font-type: 'Roboto', sans-serif;
+  /* Not used, kept for legacy support */
+}
