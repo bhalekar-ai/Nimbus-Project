@@ -1,4 +1,5 @@
 
+
 // JS to Load Navbar and Footer
 async function loadComponent(id, file) {
   try {
@@ -62,4 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial check in case section is already visible
   triggerCountAnimation();
   window.addEventListener('scroll', triggerCountAnimation);
+});
+
+// Initialize AOS (Animate on Scroll)
+AOS.init({
+  duration: 1000,
+  once: true
 });
