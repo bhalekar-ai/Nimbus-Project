@@ -1,5 +1,4 @@
 
-
 // JS to Load Navbar and Footer
 async function loadComponent(id, file) {
   try {
@@ -70,3 +69,5 @@ AOS.init({
   duration: 1000,
   once: true
 });
+
+
