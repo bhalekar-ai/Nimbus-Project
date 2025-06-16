@@ -14,4 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true,     // animation only once
+  });
+
 

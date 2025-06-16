@@ -64,10 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', triggerCountAnimation);
 });
 
-// Initialize AOS (Animate on Scroll)
-AOS.init({
-  duration: 1000,
-  once: true
-});
-
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true,     // animation only once
+  });
 
